@@ -17,8 +17,8 @@ images_container = "images"
 
 COSMOS_URL = os.getenv('APPSETTING_COSMOS_URL')
 MasterKey = os.getenv('APPSETTING_MasterKey')
-DATABASE_ID='lab5messagesdb'
-CONTAINER_ID='lab5messages'
+DATABASE_ID='lab10bmessagesdb'
+CONTAINER_ID='lab10bmessages'
 
 blob_service_client = BlobServiceClient(account_url="https://"+storage_account+".blob.core.windows.net/",credential=CONN_KEY)
 cosmos_db_client = cosmos_client.CosmosClient(COSMOS_URL, {'masterKey': MasterKey})
