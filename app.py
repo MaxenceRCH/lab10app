@@ -7,8 +7,6 @@ import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.exceptions as exceptions
 import uuid
 
-a = 1
-
 app = Flask(__name__)
 UPLOAD_FOLDER ='./static/images'
 CONN_KEY= os.getenv('APPSETTING_CONN_KEY')
@@ -17,8 +15,8 @@ images_container = "images"
 
 COSMOS_URL = os.getenv('APPSETTING_COSMOS_URL')
 MasterKey = os.getenv('APPSETTING_MasterKey')
-DATABASE_ID='lab10bmessagesdb'
-CONTAINER_ID='lab10bmessages'
+DATABASE_ID='lab5messagesdb'
+CONTAINER_ID='lab5messages'
 
 blob_service_client = BlobServiceClient(account_url="https://"+storage_account+".blob.core.windows.net/",credential=CONN_KEY)
 cosmos_db_client = cosmos_client.CosmosClient(COSMOS_URL, {'masterKey': MasterKey})
